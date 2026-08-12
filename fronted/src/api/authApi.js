@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const API =
-  "https://ai-interview-preparation-qg9x.onrender.com/api";
-
+  "https://ai-interview-preparation-qg9x.onrender.com/api/auth",
 export const registerUser =
   (userData) =>
     axios.post(
