@@ -22,6 +22,7 @@ import {
 } from "../services/questionService";
 
 function Dashboard() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [stats, setStats] = useState(null);
 
@@ -291,13 +292,19 @@ const fetchCodingAnalytics = async () => {
     <div className="flex h-screen bg-slate-100">
 
 
-      {/* Sidebar */}
-      <Sidebar />
+     {/* Sidebar */}
+<Sidebar
+  isOpen={sidebarOpen}
+  setIsOpen={setSidebarOpen}
+/>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-auto">
+     {/* Main Content */}
+<div className="flex-1 min-w-0 flex flex-col overflow-auto">
 
-        <Navbar />
+  <Navbar
+    sidebarOpen={sidebarOpen}
+    setSidebarOpen={setSidebarOpen}
+  />
 
         <div className="p-8">
 

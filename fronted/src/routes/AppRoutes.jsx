@@ -26,9 +26,11 @@ import CodingAnalytics from "../pages/CodingAnalytics";
 
 import AIImageGenerator from "../pages/AIImageGenerator";
 import AIChat from "../pages/AIChat";
+import TalkWithAI from "../pages/TalkWithAI";
 
 
 function AppRoutes() {
+  
 
   return (
 
@@ -156,6 +158,11 @@ function AppRoutes() {
            path="/ai-chat"
           element={<AIChat />}
           />
+
+          <Route
+            path="/talk-with-ai"
+            element={<TalkWithAI />}
+           />
 
       </Routes>
 

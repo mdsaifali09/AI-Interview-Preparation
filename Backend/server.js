@@ -21,6 +21,7 @@ import favoriteQuestionRoutes from "./routes/favoriteQuestionRoutes.js";
 import codingSubmissionRoutes from "./routes/codingSubmissionRoutes.js";
 import imageRoutes from "./routes/imageRoutes.js";
 import aiChatRoutes from "./routes/aiChatRoutes.js";
+import aiVoiceRoutes from "./routes/aiVoiceRoutes.js";
 
 connectDB();
 
@@ -47,7 +48,10 @@ app.use("/api/coding-submissions",codingSubmissionRoutes);
 app.use("/api/coding", codingRoutes);
 app.use("/api/images",imageRoutes);
 app.use("/api/ai-chat", aiChatRoutes);
-
+app.use(
+  "/api/ai-voice",
+  aiVoiceRoutes
+);
 
 app.get("/", (req, res) => {
   res.send("AI Prep Pro Backend Running");
